@@ -113,7 +113,7 @@ for model, params in models:
         best_score = grid.best_score_
         best_model = grid.best_estimator_
 
-joblib.dump(best_model, "model.bin")
+joblib.dump(best_model, "model_compressed.bin", compress=3)
 
 print("Training completed.")
 print("Best CV ROC-AUC:", best_score)
